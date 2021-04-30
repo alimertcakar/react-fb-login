@@ -1,4 +1,4 @@
-import React, {Component} from "react";
+import React, { Component } from "react";
 import FacebookLogin from "react-facebook-login";
 
 export default class FacebookCustomLogin extends Component {
@@ -13,7 +13,7 @@ export default class FacebookCustomLogin extends Component {
   responseFacebook = response => {
     console.log(response);
 
-    this.setState({isLoggedIn: true, userID: response.userID, name: response.name, email: response.email, picture: response.picture.data.url});
+    this.setState({ isLoggedIn: true, userID: response.userID, name: response.name, email: response.email, picture: response.picture.data.url });
   }
 
   componentClicked = () => console.log('Clicked FB Login');
@@ -25,13 +25,13 @@ export default class FacebookCustomLogin extends Component {
       // set fbContent initial state to null
       // fbContent = null;
       fbContent = (<div style={{
-          width: "30em",
-          margin: "auto",
-          background: "#aeaeae",
-          padding: "2em"
-        }}>
+        width: "30em",
+        margin: "auto",
+        background: "#aeaeae",
+        padding: "2em"
+      }}>
         <figure>
-          <img src={this.state.picture} alt={this.state.name} title={this.state.name}/>
+          <img src={this.state.picture} alt={this.state.name} title={this.state.name} />
           <figcaption>Hello {this.state.name}</figcaption>
         </figure>
         {/* In case we render email field as well */}
@@ -40,11 +40,11 @@ export default class FacebookCustomLogin extends Component {
     } else {
       fbContent = (
         <FacebookLogin
-          appId="454893001590113"
+          appId="748262856051615"
           autoLoad={true}
           fields="name,picture,email"
-            /* in case you want email or other info: */
-            /* fields="name,email,picture" */
+          /* in case you want email or other info: */
+          /* fields="name,email,picture" */
           onClick={this.componentClicked}
           callback={this.responseFacebook}
         />

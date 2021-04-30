@@ -10,10 +10,9 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">A React FB Login Component</h1>
+          <h1 className="App-title">Facebook giriş yap</h1>
         </header>
         <p className="App-intro">
-          Login with FB.
         </p>
         {/* Render custom component */}
         <FacebookCustomLogin />
